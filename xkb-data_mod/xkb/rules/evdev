@@ -14,7 +14,7 @@
 
 // PC models
 ! $pcmodels = pc101 pc102 pc104 pc105 \
-              pc104angle-z pc104wide-qu pc104aw-zqu pc104awing pc105angle pc105aw-sl \
+              pc104angle-z pc104wide-qu pc104aw-zqu pc104awing pc105angle pc105aw-sl pc105w-sl \
               pc104curl-z              pc104caw-zqu pc104cawing pc105curl pc105caw-sl
 
 // Jolla devices and keyboards
@@ -109,6 +109,7 @@
   pc104cawing	=	evdev(pc104cawing)
   pc105angle	=	evdev(pc105angle)
   pc105aw-sl	=	evdev(pc105aw-sl)
+  pc105w-sl   = evdev(pc105w-sl)
   pc105curl		=	evdev(pc105curl)
   pc105caw-sl	=	evdev(pc105caw-sl)
   *		=	evdev
@@ -1154,13 +1155,17 @@
   shift:both_shiftlock               =       +shift(both_shiftlock)
   shift:lshift_both_shiftlock        =       +shift(lshift_both_shiftlock)
   shift:rshift_both_shiftlock        =       +shift(rshift_both_shiftlock)
-  solaris:sun_compat				 =		 +sun_vndr/solaris(sun_compat)
+  shift:lshift_latch                 =       +shift(lshift_latch)
+  shift:rshift_latch                 =       +shift(rshift_latch)
+  solaris:sun_compat				         =	  	 +sun_vndr/solaris(sun_compat)
   lv3:caps_switch                    =       +level3(caps_switch)
   lv3:bksl_switch                    =       +level3(bksl_switch)
   lv3:lsgt_switch                    =       +level3(lsgt_switch)
   lv3:caps_switch_latch              =       +level3(caps_switch_latch)
   lv3:bksl_switch_latch              =       +level3(bksl_switch_latch)
   lv3:lsgt_switch_latch              =       +level3(lsgt_switch_latch)
+  lv5:caps_switch                    =       +level5(caps_switch)
+  lv5:lctl_switch                    =       +level5(lctl_switch)
   lv5:lsgt_switch_lock            =       +level5(lsgt_switch_lock)
   lv5:ralt_switch_lock            =       +level5(ralt_switch_lock)
   lv5:lwin_switch_lock            =       +level5(lwin_switch_lock)

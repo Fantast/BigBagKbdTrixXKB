@@ -1011,3 +1011,14 @@ xkb_symbols "cmk_ed_us" {
 // Note: I consider level1 access to the accents paramount; lstroke should be an easy reach on AltGr+l I hope?
 };
 // <-- DreymaR: Additions to xkb/symbols/pl
+
+
+partial alphanumeric_keys
+xkb_symbols "hash_no_number" {
+    include "ru(winkeys)"
+    name[Group1]= "Russian (with # instead of №)";
+
+    key <ESC>  { [ Escape, Escape, Escape, Escape, Escape, Escape, Escape, Escape ]   };
+    key <AE03> { [ 3,      numbersign  ] };
+    key <BKSL> { [ backslash,         bar  ] };
+};

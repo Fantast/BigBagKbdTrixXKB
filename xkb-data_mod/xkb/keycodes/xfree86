@@ -576,6 +576,12 @@ xkb_keycodes "pc105aw-sl" {
     augment "xfree86(pc105angle)"
 };
 
+// pc105_Wide(Slash) ergonomic mod (by Fantast, 2019)
+xkb_keycodes "pc105w-sl" {
+    include "xfree86(pc105wide-rightpart)"
+    augment "xfree86(xfree86)"
+};
+
 // pc105_CurlAngleWide(Slash) ergonomic mod (by DreymaR, 2017)
 xkb_keycodes "pc105caw-sl" {
 

@@ -480,6 +480,12 @@ xkb_keycodes "pc105aw-sl" {
     augment "evdev(pc105angle)"
 };
 
+// pc105_Wide(Slash) ergonomic mod (by Fantast, 2019)
+xkb_keycodes "pc105w-sl" {
+    include "evdev(pc105wide-rightpart)"
+    augment "evdev(evdev)"
+};
+
 // pc105_CurlAngleWide(Slash) ergonomic mod (by DreymaR, 2017)
 xkb_keycodes "pc105caw-sl" {
 

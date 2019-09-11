@@ -432,34 +432,73 @@ xkb_symbols "lv5" {
                    PtrBtn(button=1)     , PtrBtn(button=1)      , // PtrLBt
                    NoAction()           , NoAction()           ]
                };  // B
+
+
+
+
     key <AB06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Button2      , Pointer_Button2       , // MBt(††)
-                   comma                , semicolon            ], //  , ;
+                   XF86Copy             , XF86Copy              , // Copy(§§)
+                   XF86Copy             , XF86Copy             ], // Copy(§§)
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   PtrBtn(button=2)     , PtrBtn(button=2)      , // PtrMBt
-                   NoAction()           , NoAction()           ]
-               };  // Cmk K
+      Redirect(key=<AB03>,mods=Control,clearmods=LevelFive), Redirect(key=<AB03>,mods=Shift+Control,clearmods=LevelFive), // Ctrl+C
+      Redirect(key=<AB03>,mods=Control,clearmods=LevelFive), Redirect(key=<AB03>,mods=Shift+Control,clearmods=LevelFive)] // Ctrl+C
+//                   Redirect(key=<COPY>) , Redirect(key=<COPY>) ]  // <COPY>(‡‡) (not working since Ub14.04?)
+               };  // C
     key <AB07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Button3      , Pointer_Button3       , // RBt(††)
-                   KP_0                 , U21D5                ], // KP_0 ↕ ⇕
+                   XF86Paste            , XF86Paste             , // Paste(§§)
+                   XF86Paste            , XF86Paste            ], // Paste(§§)
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   PtrBtn(button=3)     , PtrBtn(button=3)      , // PtrRBt
-                   NoAction()           , NoAction()           ]
-               };  // M
+      Redirect(key=<AB04>,mods=Control,clearmods=LevelFive), Redirect(key=<AB04>,mods=Shift+Control,clearmods=LevelFive), // Ctrl+V
+      Redirect(key=<AB04>,mods=Control,clearmods=LevelFive), Redirect(key=<AB04>,mods=Shift+Control,clearmods=LevelFive)] // Ctrl+V
+//                   Redirect(key=<PAST>) , Redirect(key=<PAST>)  , // <PAST>(‡‡)
+//                   Redirect(key=<PAST>) , Redirect(key=<PAST>) ]  // <PAST>(‡‡) (not working since Ub14.04?)
+               };  // V
     key <AB08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Left         , Pointer_Left          , // PtrLe(††)
-                   KP_0                 , U21D5                ], // KP_0 ↕ ⇕
+                   XF86Cut              , XF86Cut               , // Cut(§§)
+                   XF86Cut              , XF86Cut              ], // Cut(§§)
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=-8,y=+0)   , MovePtr(x=-8,y=+0)    , // PtrLe(††)
-                   NoAction()           , NoAction()           ]
-               };  // , <
+      Redirect(key=<AB02>,mods=Control,clearmods=LevelFive), Redirect(key=<AB02>,mods=Shift+Control,clearmods=LevelFive), // Ctrl+X
+      Redirect(key=<AB02>,mods=Control,clearmods=LevelFive), Redirect(key=<AB02>,mods=Shift+Control,clearmods=LevelFive)] // Ctrl+X
+//                   Redirect(key=<CUT>)  , Redirect(key=<CUT>)  ]  // <CUT>(‡‡) (not working since Ub14.04?)
+               };  // X
     key <AB09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Right        , Pointer_Right         , // PtrRi(††)
-                   KP_Decimal           , colon                ], // KP_. :
+                   Undo                 , Redo                  , // Undo/Redo
+                   Undo                 , Redo                 ], // Undo/Redo
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=+8,y=+0)   , MovePtr(x=+8,y=+0)    , // PtrRi(††)
-                   NoAction()           , NoAction()           ]
-               };  // . >
+      Redirect(key=<AB01>,mods=Control,clearmods=LevelFive), Redirect(key=<AB01>,mods=Shift+Control,clearmods=LevelFive), // Ctrl+Z
+      Redirect(key=<AB01>,mods=Control,clearmods=LevelFive), Redirect(key=<AB01>,mods=Shift+Control,clearmods=LevelFive)] // Ctrl+Z
+//                   Redirect(key=<UNDO>) , Redirect(key=<UNDO>) ]  // <UNDO>(‡‡) (not working?)
+               };  // Z
+
+
+//    key <AB06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
+//                   Pointer_Button2      , Pointer_Button2       , // MBt(††)
+//                   comma                , semicolon            ], //  , ;
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   PtrBtn(button=2)     , PtrBtn(button=2)      , // PtrMBt
+//                   NoAction()           , NoAction()           ]
+//               };  // Cmk K
+//    key <AB07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
+//                   Pointer_Button3      , Pointer_Button3       , // RBt(††)
+//                   KP_0                 , U21D5                ], // KP_0 ↕ ⇕
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   PtrBtn(button=3)     , PtrBtn(button=3)      , // PtrRBt
+//                   NoAction()           , NoAction()           ]
+//               };  // M
+//    key <AB08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
+//                   Pointer_Left         , Pointer_Left          , // PtrLe(††)
+//                   KP_0                 , U21D5                ], // KP_0 ↕ ⇕
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   MovePtr(x=-8,y=+0)   , MovePtr(x=-8,y=+0)    , // PtrLe(††)
+//                   NoAction()           , NoAction()           ]
+//               };  // , <
+//    key <AB09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
+//                   Pointer_Right        , Pointer_Right         , // PtrRi(††)
+//                   KP_Decimal           , colon                ], // KP_. :
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   MovePtr(x=+8,y=+0)   , MovePtr(x=+8,y=+0)    , // PtrRi(††)
+//                   NoAction()           , NoAction()           ]
+//               };  // . >
     key <AB10> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Multi_key            , Multi_key             , // Compose
                    KP_Divide            , KP_Divide            ]  // KP_/
@@ -467,14 +506,17 @@ xkb_symbols "lv5" {
 
 // NOTE: The Space key should preserve the Shift state; it's special because both levels have the same symbol.
 //       One might use a key type that has the 'preserve[Shift] = Shift;' property. However, I fix it directly.
-   key <SPCE> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Return               , Return                , // Enter
-                   space                , nobreakspace         ], // Space
-                 actions[Group1]=[NoAction(),SetMods(mods=Shift),NoAction(),SetMods(mods=Shift),
-                   Redirect(key=<RTRN>) , Redirect(key=<RTRN>)  , // <RTRN>
-                   NoAction()           , NoAction()           ]
-               };  // <SPCE>
+//   key <SPCE> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
+//                   Return               , Return                , // Enter
+//                   space                , nobreakspace         ], // Space
+//                 actions[Group1]=[NoAction(),SetMods(mods=Shift),NoAction(),SetMods(mods=Shift),
+//                   Redirect(key=<RTRN>) , Redirect(key=<RTRN>)  , // <RTRN>
+//                   NoAction()           , NoAction()           ]
+//               };  // <SPCE>
 //    key <CAPS> { [ NoSymbol,NoSymbol,NoSymbol,NoSymbol ] };  // CapsLock
+
+    // use RightShift to switch layout
+    key <RTSH> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, ISO_Next_Group, ISO_Next_Group, ISO_Next_Group ] };
 
 // §§: XCV Cut/Copy/Paste seem OK in Firefox but not Gedit!? This seems to be a GTK weakness.
 //     Some bind fiddling in ~/.gtkrc-2.0 and ~/.config/gtk-3.0/gtk.css can get this working

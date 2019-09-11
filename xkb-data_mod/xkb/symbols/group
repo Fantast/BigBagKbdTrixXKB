@@ -78,8 +78,8 @@ xkb_symbols "toggle" {
 // (depending on which Shift is pressed first).
 partial modifier_keys
 xkb_symbols "shifts_toggle" {
-    key <LFSH> { [ Shift_L, ISO_Prev_Group ] };
-    key <RTSH> { [ Shift_R, ISO_Next_Group ] };
+    key <LFSH> { [ NoSymbol, ISO_Prev_Group ] };
+    key <RTSH> { [ NoSymbol, ISO_Next_Group ] };
 };
 
 // Pressing Shift+Caps_Lock switches to the next group.

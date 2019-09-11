@@ -95,6 +95,13 @@
     </model>
     <model>
       <configItem>
+        <name>pc105w-sl</name>
+        <description>Generic 105-key PC (intl.) (Wide(/)Ergo mod)</description>
+        <vendor>Generic</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>pc105curl</name>
         <description>Generic 105-key PC (intl.) (CurlAngle_Ergo mod)</description>
         <vendor>Generic</vendor>
@@ -4880,6 +4887,12 @@
         </languageList>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>hash_not_number</name>
+            <description>Russian (with # instead of №)</description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>phonetic</name>
