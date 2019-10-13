@@ -73,70 +73,70 @@ xkb_symbols "lv5" {
                    LockMods(mods=Lock)   , LockMods(mods=Lock)  ]  // Lock mod for <CAPS>
                };  // ; Esc (one could also use <SCLK> aka ScrollLock for Caps, if desired)
 
-// NOTE: Many are used to Ctrl+Alt+<FK##> being XF86_Switch_VT_## keys! This is lost with Extend. Use Ext+AltGr+<FK##> now.
-    key <FK01> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   XF86AudioPlay        , XF86AudioPause        , // Play/Pause
-                   XF86_Switch_VT_1     , XF86_Switch_VT_1     ], // Virtual Terminal
+
 //    key <FK01> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioPlay         , XF86AudioPause        ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I208>,clearmods=all), Redirect(key=<I209>,clearmods=all), // <I208>/<I209>(‡‡)
-                   SwitchScreen(screen=1,!same)      , SwitchScreen(screen=1,!same)      ]
-               };  // F01
-    key <FK02> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioPrev         , XF86AudioRewind       ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I173>,clearmods=all), Redirect(key=<I176>,clearmods=all), // <I173>/<I176>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F02
-    key <FK03> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioNext         , XF86AudioForward      ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I171>,clearmods=all), Redirect(key=<I216>,clearmods=all), // <I171>/<I216>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F03
-    key <FK04> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioStop         , XF86Eject             ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I174>,clearmods=all), Redirect(key=<I169>,clearmods=all), // <I174>/<I169>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F04
-    key <FK05> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioMute         , XF86Reload            ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<MUTE>,clearmods=all), Redirect(key=<I181>,clearmods=all), // <MUTE>/<I181>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F05
-    key <FK06> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioLowerVolume  , XF86MonBrightnessDown ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<VOL->,clearmods=all), Redirect(key=<I232>,clearmods=all), // <VOL->/<I232>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F06
-    key <FK07> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioRaiseVolume  , XF86MonBrightnessUp   ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<VOL+>,clearmods=all), Redirect(key=<I233>,clearmods=all), // <VOL+>/<I233>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F07
-    key <FK08> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioMedia        , XF86Sleep             ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I234>,clearmods=all), Redirect(key=<I150>,clearmods=all), // <I234>/<I150>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F08
-    key <FK09> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86HomePage          , XF86WWW               ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I180>,clearmods=all), Redirect(key=<I158>,clearmods=all), // <I180>/<I158>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F09
-    key <FK10> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Search            , XF86Mail              ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I225>,clearmods=all), Redirect(key=<I223>,clearmods=all), // <I225>/<I223>(‡‡)
-                   NoAction()           , NoAction()           ]
-               };  // F10
-    key <FK11> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Explorer          , XF86Launch1           ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I152>,clearmods=all), Redirect(key=<I156>,clearmods=all), // <I152>/<I156>(‡‡)
-                   NoAction()           , NoAction()           ] // (in inet(evdev), XF86Launch3 is <I210>)
-               };  // F11
-    key <FK12> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Calculator        , XF86Launch2           ],
-                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   Redirect(key=<I148>,clearmods=all), Redirect(key=<I157>,clearmods=all), // <I148>/<I157>(‡‡)
-                   NoAction()           , NoAction()           ] // (in inet(evdev), XF86Launch4 is <I211>)
-               };  // F12
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I208>,clearmods=all), Redirect(key=<I209>,clearmods=all), // <I208>/<I209>(‡‡)
+//                   SwitchScreen(screen=1,!same)      , SwitchScreen(screen=1,!same)      ]
+//               };  // F01
+//    key <FK02> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioPrev         , XF86AudioRewind       ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I173>,clearmods=all), Redirect(key=<I176>,clearmods=all), // <I173>/<I176>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F02
+//    key <FK03> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioNext         , XF86AudioForward      ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I171>,clearmods=all), Redirect(key=<I216>,clearmods=all), // <I171>/<I216>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F03
+//    key <FK04> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioStop         , XF86Eject             ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I174>,clearmods=all), Redirect(key=<I169>,clearmods=all), // <I174>/<I169>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F04
+//    key <FK05> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioMute         , XF86Reload            ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<MUTE>,clearmods=all), Redirect(key=<I181>,clearmods=all), // <MUTE>/<I181>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F05
+//    key <FK06> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioLowerVolume  , XF86MonBrightnessDown ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<VOL->,clearmods=all), Redirect(key=<I232>,clearmods=all), // <VOL->/<I232>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F06
+//    key <FK07> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioRaiseVolume  , XF86MonBrightnessUp   ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<VOL+>,clearmods=all), Redirect(key=<I233>,clearmods=all), // <VOL+>/<I233>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F07
+//    key <FK08> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86AudioMedia        , XF86Sleep             ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I234>,clearmods=all), Redirect(key=<I150>,clearmods=all), // <I234>/<I150>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F08
+//    key <FK09> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86HomePage          , XF86WWW               ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I180>,clearmods=all), Redirect(key=<I158>,clearmods=all), // <I180>/<I158>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F09
+//    key <FK10> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Search            , XF86Mail              ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I225>,clearmods=all), Redirect(key=<I223>,clearmods=all), // <I225>/<I223>(‡‡)
+//                   NoAction()           , NoAction()           ]
+//               };  // F10
+//    key <FK11> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Explorer          , XF86Launch1           ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I152>,clearmods=all), Redirect(key=<I156>,clearmods=all), // <I152>/<I156>(‡‡)
+//                   NoAction()           , NoAction()           ] // (in inet(evdev), XF86Launch3 is <I210>)
+//               };  // F11
+//    key <FK12> { symbols[Group1]=[ NoSymbol,NoSymbol,NoSymbol,NoSymbol, XF86Calculator        , XF86Launch2           ],
+//                 actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
+//                   Redirect(key=<I148>,clearmods=all), Redirect(key=<I157>,clearmods=all), // <I148>/<I157>(‡‡)
+//                   NoAction()           , NoAction()           ] // (in inet(evdev), XF86Launch4 is <I211>)
+//               };  // F12
+//
+
+
 
     key <TLDE> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Delete  , Delete , Delete           , Delete             ], // Del
@@ -516,7 +516,7 @@ xkb_symbols "lv5" {
 //    key <CAPS> { [ NoSymbol,NoSymbol,NoSymbol,NoSymbol ] };  // CapsLock
 
     // use RightShift to switch layout
-    key <RTSH> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, ISO_Next_Group, ISO_Next_Group, ISO_Next_Group ] };
+    key <RTSH> { [ Shift_R, Shift_R, Shift_R, Shift_R, ISO_Next_Group, ISO_Next_Group, ISO_Next_Group ] };
 
 // §§: XCV Cut/Copy/Paste seem OK in Firefox but not Gedit!? This seems to be a GTK weakness.
 //     Some bind fiddling in ~/.gtkrc-2.0 and ~/.config/gtk-3.0/gtk.css can get this working
